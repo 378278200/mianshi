@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+        }
+
+        body{
+            color: #3C3C3C;
+        }
+        #box_gj{
+            color: #3C3C3C;
+            width: 140px;
+            height: 100px;
+            float: left;
+            position: absolute;
+            top: 25px;
+            left: 100px;
+            overflow: auto;
+            display: none;
+        }
+        #tb_homepage_top{
+            width: 1920px;
+            height: 25px;
+            background:whitesmoke;
+
+        }
+        #box_gj span{
+            display: block;
+
+        }
+        #box_gj span a{
+            text-decoration: none;
+            color: black;
+        }
+        #box_gj span a:hover{
+            background: lightblue;
+        }
+        #top_left>span{
+           line-height: 25px;
+           text-align: center;
+            position: absolute;
+            left: 100px;
+        }
+        #box_2{
+            width: 1750px;
+            height: 25px;
+            margin-left: 200px;
+            position: absolute;
+            top:0;
+        }
+        #box_2 ul li{
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 25px;
+            margin: 0 20px 0 20px;
+        }
+        #box_2 ul li  a{
+            color: black;
+            text-decoration: none;
+        }
+        #tb_top_right{
+            padding-left: 50%;
+        }
+        #mytb{
+            width: 86px;
+            height: 55px;
+            position: absolute;
+            left: 895px;
+            background: whitesmoke;
+            display: none;
+        }
+        #mytb span{
+            float: left;
+            padding: 5px 1px 3px 0;
+        }
+        #mysc{
+            width: 80px;
+            height: 60px;
+            background: whitesmoke;
+            position: absolute;
+            left: 1097px;
+            display: none;
+        }
+        #mysc span{
+            float: left;
+            padding: 5px 1px 3px 0;
+        }
+        #myzx{
+            width: 90px;
+            height: 140px;
+            position: absolute;
+            left: 1287px;
+            background: whitesmoke;
+            display: none;
+        }
+        #myzx span{
+            float: left;
+            padding: 5px 1px 3px 0;
+        }
+        #mysc span a,#myzx span a,#mytb span a {
+            text-decoration: none;
+            color: black;
+        }
+        #box_2>.homegape_top_right li a:hover,#tb_top_right>ul>li>a:hover{
+            color: darkorange;
+            font-weight: 500;
+        }
+        #tb_tp{
+            position: absolute;
+            top: 25px;
+            left: 200px;
+            z-index: -1;
+        }
+        #search_top ul li a,#search_bottom  li a{
+            text-decoration: none;
+            color: black;
+        }
+        #search_bottom li a:hover{
+            color: red;
+        }
+        #search_top ul li a{
+            font-size: 14px;
+            color: red;
+        }
+        #search_top ul li a:hover{
+            color: red;
+            background: orange;
+        }
+        #search_top{
+            width: 150px;
+            height: 20px;
+            position: absolute;
+            left:572px;
+            top: 75px;
+        }
+        #search_top ul li{
+            float: left;
+            list-style: none;
+            margin: 0 5px 0 5px;
+            padding: 2px 2px 3px 2px ;
+        }
+        #baobei{
+            background: darkorange;
+            border-radius: 5px 5px 0 0 ;
+        }
+        #search_center input{
+            width: 300px;
+            height: 30px;
+            border: none;
+            position: relative;
+            top: 3px;
+        }
+        #search_center{
+            position: absolute;
+            left: 560px;
+            top: 100px;
+            width: 370px;
+            height: 35px;
+            border:2px solid orangered;
+            border-radius: 50px 0 0 50px;
+            padding-left: 30px;
+        }
+        #search_center>div{
+            width: 60px;
+            height: 35px;
+            background: orangered;
+            border: 2px solid orangered;
+            border-radius: 0 50px 50px 0;
+            position: absolute;
+            top: -2px;
+            left: 400px;
+            color: white;
+            font-family: zhengti;
+            cursor:pointer
+        }
+        .xiangji{
+            display: block;
+            background: url("img/xiangji.jpg");
+            width: 25px;
+            height: 20px;
+            position: relative;
+            top: -23px;
+            left: 320px;
+        }
+        #search{
+            position: absolute;
+            left: 320px;
+            width: 50px;
+            height: 20px;
+            font-size: 24px;
+            top: 0;
+        }
+        #search_bottom {
+            width:1000px;
+            height: 30px;
+            position: absolute;
+            left: 555px;
+            top: 140px;
+        }
+        #search_bottom li{
+            float: left;
+            list-style: none;
+            margin: 5px 1px 1px 5px;
+        }
+        #search_bottom span{
+            position: absolute;
+            top: 0;
+            left: 630px;
+            margin-top: 5px;
+        }
+        #tb_weima{
+            position: absolute;
+            top: 70px;
+            left: 1300px;
+        }
+        .weima{
+            z-index: -1;
+        }
+        #tb_center_top{
+            width: 1920px;
+            height: 30px;
+            background: coral;
+            position: absolute;
+            top: 200px;
+            z-index: 5;
+        }
+        #tb_center_top ul li{
+              float: left;
+              list-style: none;
+              margin: 0 5px 0 10px;
+            position: relative;
+            left: 547px;
+          }
+        #tb_center_top ul li a{
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            font-weight: 500;
+        }
+        #tb_center_left{
+            width: 200px;
+            height: 550px;
+            border: 1px solid orangered;
+            position: absolute;
+            top: 200px;
+            left: 230px;
+            float: left;
+        }
+        #tb_left_left_js{
+            width: 711px;
+            height: 520px;
+            position: absolute;
+            top: 29px;
+            left: 200px;
+        }
+        .js1,.js2,.js3,.js4,.js5,.js6,.js7,.js8,.js9,.js10,.js11,.js12,.js13,.js14{
+            width: 711px;
+            height: 520px;
+            border: 1px solid orangered;
+            position: absolute;
+            top: 0;
+            background:whitesmoke;
+            display: none;
+            z-index: 20;
+        }
+
+        .js1 span,.js2 span,.js3 span,.js4 span,.js5 span,.js6 span,.js7 span,.js8 span,.js9 span,
+        .js10 span,.js11 span,.js12 span,.js13 span,.js14 span{
+            margin: 100px 60px 60px 60px ;
+            display: block;
+            font-size: 20px;
+        }
+
+        #biaoti>span{
+            font-size: 18px;
+            color: white;
+            font-weight: 500;
+        }
+        #biaoti{
+            background: red;
+            text-align: center;
+        }
+        #tb_center_biaoti ul  li{
+            list-style: none;
+            float: left;
+            margin-top: 10px;
+
+        }
+        #tb_center_biaoti ul{
+           line-height: 35px;
+            padding-left: 20px;
+
+        }
+        #tb_center_biaoti ul  li a{
+            color: grey;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px 3px 5px 4px ;
+        }
+        #tb_center_biaoti ul  li a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        #tb_center_center_tupian{
+            position: absolute;
+            top: 240px;
+            left:440px;
+        }
+        #tb_lb_jz ul li{
+            list-style: none;
+            border: 1px solid red;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+        #tb_lb_jz{
+            position: absolute;
+            top:30px;
+            left: 470px;
+        }
+
+        #tb_lb_jz ul li a{
+            color: black;
+            text-decoration: none;
+        }
+
+        #tianmao_gg{
+            width: 500px;
+            height: 22px;
+            position: absolute;
+            top: 500px;
+            left: 443px;
+        }
+        #tianmao_gg>span{
+            background: url("img/index.png") no-repeat;
+            display:block;
+            height: 22px;
+        }
+        #tianmao_gg>em{
+            float: left;
+            position: absolute;
+            top:0;
+            left: 135px;
+            text-align: center;
+        }
+
+        #tianmao_gg>strong{
+            position: absolute;
+            top: 0;
+            left: 470px;
+        }
+
+
+        #tmall_lb {
+            position: absolute;
+            top: 530px;
+            left: 440px;
+            width: 500px;
+            height: 222px;
+            overflow: hidden;
+            z-index: 5;
+        }
+
+
+        #tianmao_xm ul  li{
+            list-style: none;
+            float: left;
+            background:indianred;
+            padding: 0 42px  0 41px;
+            height: 5px;
+        }
+
+        #tianmao_xm{
+            position: absolute;
+            top: 520px;
+            left: 440px;
+            height: 5px;
+            width: 500px;
+            overflow: hidden;
+        }
+
+       #tianmao_xm ul li:first-child{
+           background: black;
+       }
+
+
+
+        #tb_lb> span>img{
+            position: absolute;
+            top: 0;
+            left: 510px;
+            z-index: -1;
+        }
+
+
+        .tu2{
+            position: absolute;
+            top: 522px;
+            left: 950px;
+        }
+        .tu2_z{
+            position: absolute;
+            top: -22px;
+        }
+        #tb_zhdl{
+              width: 300px;
+              height: 150px;
+              background: url("img/zhdl_bj.jpg");
+              position: absolute;
+              top:240px;
+              left: 1150px;
+              z-index: -1;
+          }
+
+        #tb_zhdl>span{
+            position: relative;
+            left: -20px;
+        }
+
+        #tb_zhdl a img{
+           position: relative;
+            left: 50px;
+            top: 20px;
+        }
+
+        #tb_zzk{
+            width: 200px;
+            height: 40px;
+            position: absolute;
+            top: 345px;
+            left: 1160px;
+        }
+
+        #tb_zzk ul li{
+            list-style: none;
+            float: left;
+            margin: 5px 5px 5px 5px ;
+            background: orangered;
+            padding: 5px 15px 5px 15px;
+            border-radius: 15px;
+        }
+
+        #tb_zzk ul li a {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+
+
+        #tb_right_xx{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 390px;
+            left: 1160px; ;
+        }
+
+        .products{
+            width: 200px;
+            height: 60px;
+            border: 1px solid black;
+            position: absolute;
+            top: 40px;
+            border-radius: 5px;
+        }
+
+        .fb{
+            list-style: none;
+            float: left;
+            margin: 8px 1px 2px 2px;
+        }
+
+        .box_xx_xz{
+            border-bottom: 3px solid red;
+        }
+        .main{
+            display: none;
+        }
+        .selected{
+            display: block;
+        }
+
+        #tb_right_bm ul li{
+            list-style: none;
+            float: left;
+        }
+        #tb_right_bm ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        #tb_right_bm ul li a:hover{
+            color: red;
+            font-weight: 600;
+        }
+        .chf{
+            background: url("img/shouji.jpg");
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+        #tb_right_bm{
+            width: 220px;
+            height: 50px;
+            position: absolute;
+            top: 110px;
+        }
+
+        #tb_right_bm ul li p{
+            text-align: center;
+        }
+
+        .lx{
+            background: url("img/lvxing.jpg");
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+
+        .cx{
+            background: url("img/chexian.jpg");
+            width: 50px;
+            height: 38px;
+            display: block;
+            position: relative;
+
+        }
+
+        .yx{
+            background: url("img/youxi.jpg");
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+
+        .chexian_box{
+            position: relative;
+            top: 12px;
+        }
+        .yy{
+
+        }
+        .youxi_box{
+            position: relative;
+            top: 1px;
+            margin-left: 15px;
+        }
+
+        .cp{
+            background: url("img/caipiao.jpg") no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+        .dy{
+            background: url("img/dianying.jpg") no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+        .jd{
+            background: url("img/jiudian.jpg") no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+        .lc{
+            background: url("img/licai.jpg") no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+        .zfw{
+            background: url("img/fuwu.jpg") no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+        .yc{
+            background: url("img/yanchu.jpg") no-repeat;
+            width: 30px;
+            height: 30px;
+            display: block;
+        }
+
+        .sdm{
+            background: url("img//shuidian.jpg") no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+        .hcp{
+            background: url("img/chepiao.jpg") no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+        .caipiao_box span,.dianying_box span,.jiudian_box span,.licai_box span,.zhaofuwu_box span,.yanchu_box span,.shuidianmei_box span,.huochepiao_box span{
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        .licai_box{
+            margin-left: 10px;
+        }
+
+        .yanchu_box p{
+            position: relative;
+            top: 20px;
+            left: 8px;
+        }
+
+        .shuidianmei_box {
+            margin-left: 20px;
+        }
+
+        .huochepiao_box {
+            margin-left: 10px;
+        }
+
+        #tb_right_bm_xx{
+            position: absolute;
+            top: 180px;
+        }
+        .chf_xx,.lx_xx,.cx_xx{
+            width: 215px;
+            height: 140px;
+            border:1px solid black;
+            position: absolute;
+            top:0;
+            display: none;
+            background: wheat;
+        }
+        #tb_bottom{
+            width: 1146px;
+            height: 130px;
+            position: absolute;
+            top:761px;
+            left: 230px;
+        }
+        .tb_tt{
+            padding: 50px 0 0 22px;
+        }
+
+        .xx1,.xx2,.xx3{
+            width: 548px;
+            height: 98px;
+            margin-top: 20px;
+        }
+        #donghua{
+            position: relative;
+            top: 0;
+        }
+        .xx1 a,.xx2 a,.xx3 a{
+            text-decoration: none;
+            color: black;
+        }
+        #tt_xx{
+            position: absolute;
+            left: 210px;
+            top: -1px;
+            width: 687px;
+            height: 130px;
+            overflow: hidden;
+        }
+
+        .xx1 h4,.xx1 p ,.xx2 h4,.xx2 p,.xx3 h4,.xx3 p{
+            position: relative;
+            top: -72px;
+            left:139px;
+        }
+        .xx1 h4,.xx2 h4,.xx3 h4{
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .xx1 p,.xx2 p,.xx3 p{
+            color: darkgray;
+            font-size: 13px;
+        }
+
+        #app_box{
+            width:210px;
+            height: 143px;
+        }
+
+        #app_box div{
+            position: absolute;
+            top: -40px;
+            left: 0;
+            border: 1px solid lightgray;
+            z-index: 10;
+            background: ghostwhite;
+            display: none;
+        }
+
+        #app_box ul{
+            list-style: none;
+            float: left;
+        }
+
+        #app_box ul li{
+            margin: 9px 2px 5px 10px;
+        }
+
+        #app_box h3{
+            font-size: 18px;
+        }
+
+        #app_box div p{
+            font-size: 10px;
+        }
+
+        #app{
+            position: absolute;
+            left: 930px;
+            top: -16px;
+        }
+
+
+    </style>
+
+
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            $(".gjxz").mouseenter(function(){
+                $("#box_gj").show();
+            });
+            $("#top_left").mouseleave(function(){
+                $("#box_gj").hide();
+            });
+            $(".mytb").mouseenter(function(){
+                $("#mytb").show();
+            });
+            $(".mytb").mouseleave(function(){
+                $("#mytb").hide();
+            });
+            $(".mysc").mouseenter(function(){
+                $("#mysc").show();
+            });
+            $(".mysc").mouseleave(function(){
+                $("#mysc").hide();
+            });
+            $(".myzx").mouseenter(function(){
+                $("#myzx").show();
+            });
+            $(".myzx").mouseleave(function(){
+                $("#myzx").hide();
+            });
+            $("#tb_center_biaoti>ul").mouseenter(function(){
+               var left_jieshao=$(this).index();
+               $("#tb_left_left_js").css("z-index",10);
+               $("#tb_left_left_js>div").eq(left_jieshao).fadeIn().siblings("div").hide();
+
+            });
+            $("#tb_center_left").mouseleave(function(){
+               $("#tb_left_left_js").css("z-index",-1);
+               $("#tb_left_left_js>div").fadeOut() ;
+
+            });
+        });
+        window.onload=init;
+        var i=1;
+        var dsq;
+        function init() {
+            dsq=window.setInterval("tupian()",2000);
+        }
+        function tupian(){
+            if (i>6){
+                i=1
+            }
+         var obj=document.getElementById("d1");
+            obj.src="img/a"+i+".jpg";
+            i++;
+        }
+        function stoptu(n,m) {
+            i=n;
+            var obj=document.getElementById("d1");
+            obj.src="a"+n+".jpg";
+            window.clearInterval(dsq);
+            m.style.background="ororange";
+        }
+
+        function dongtu(){
+            dsq=window.setInterval("tupian()",2000);
+        }
+
+        function tingtu() {
+            window.clearInterval(dsq);
+        }
+
+        function starttu(){
+            dsq=window.setInterval("tupian()",2000);
+        }
+
+        $(function () {
+            $("#fb li").mouseenter(function(){
+                $(this).addClass("box_xx_xz").siblings().removeClass("box_xx_xz");
+                var idx=$(this).index();
+                $(".main").eq(idx).addClass("selected").siblings().removeClass("selected")
+            })
+
+        });
+        $(function () {
+            $("#app_box>ul>li").mouseenter(function () {
+                $(this).parent().children("div").show();
+            });
+            $("#app_box>ul").mouseleave(function () {
+                $(this).children("div").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="tb_homepage">
+        <div id="tb_homepage_top">
+            <div id="top_left">
+                <span class="gjxz">中国大陆</span>
+                <img src="img/xiala.jpg"  width="10px" height="8px" style="position: relative;left: 155px;top: 3px; "   />
+                <div id="box_gj">
+                    <span><a href="#">英国</a></span>
+                    <span><a href="#">美国</a></span>
+                    <span><a href="#">台湾</a></span>
+                    <span><a href="#">澳大利亚</a></span>
+                    <span><a href="#">澳门</a></span>
+                    <span><a href="#">香港</a></span>
+                    <span><a href="#">新加坡</a></span>
+                    <span><a href="#">马来西亚</a></span>
+                    <span><a href="#">小日本</a></span>
+                    <span><a href="#">网</a></span>
+                </div>
+                <div id="box_2">
+                    <ul class="homegape_top_right">
+                        <li style="color: red"><a href="#">亲，请登录</a></li>
+                        <li><a href="#">免费注册</a></li>
+                        <li><a href="#">手机逛淘宝</a></li>
+                    </ul>
+                 <div id="tb_top_right" >
+                     <ul>
+                        <li class="mytb"><a href="#">我的淘宝
+                            <img src="img/xiala.jpg"  width="10px" height="8px"  /></a>
+                            <div id="mytb">
+                                    <span><a href="#">已买到的宝贝</a></span>
+                                    <span><a href="#">我的足迹</a></span>
+                            </div>
+                         </li>
+                        <li><a href="#"><img src="img/gouwuche.jpg"  width="15px" height="12px" style="position: relative;top: 2px;left: -3px" />购物车<img src="img/xiala.jpg"  width="10px" height="8px"  /></a></li>
+                        <li class="mysc"><a href="#">收藏夹<img src="img/xiala.jpg"  width="10px" height="8px"  /></a>
+                            <div id="mysc">
+                                <span><a href="#">收藏的宝贝</a></span>
+                                <span><a href="#">收藏的商店</a></span>
+                            </div>
+                        </li>
+                        <li><a href="#">商品分类<img src="img/shangpin.jpg"  width="15px" height="15px" style="position: relative;top: 3px;
+                                left: 10px" /></a></li>
+                        <li class="myzx" ><a href="#">卖家中心<img src="img/xiala.jpg"  width="10px" height="8px"  /></a>
+                            <div id="myzx">
+                                    <span><a href="#">免费开店</a></span>
+                                    <span><a href="#">已卖出的商品</a></span>
+                                    <span><a href="#">出售中的商品</a></span>
+                                    <span><a href="#">卖家服务市场</a></span>
+                                    <span><a href="#">体检中心</a></span>
+                                    <span><a href="#">问商友</a></span>
+                            </div>
+                        </li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">网站导航<img src="img/daohang.jpg"  width="15px" height="15px" style="position: relative;top: 3px;
+left: 6px" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="tb_homepage_all">
+        <div id="tb_tp">
+            <img src="img/logo.jpg" width="270px" height="165px" class="tb_tupian" alt="logo">
+        </div>
+        <div id="tb_search">
+            <div id="search_top">
+                <ul class="search_top">
+                    <li id="baobei"><a href="#" style="color: white">宝贝</a></li><li><a href="#">天猫</a></li><li><a href="#">店铺</a></li>
+                </ul>
+            </div>
+            <div id="search_center">
+                <input type="text" name="search" placeholder="请输入关键字">
+                <span class="xiangji"></span>
+                <div id="search">搜索</div>
+            </div>
+
+            <div id="search_bottom">
+                <li><a href="#">新款连衣裙</a></li><li><a href="#">四件套</a></li><li ><a href="#" style="color: red">潮流T恤</a></li>
+                <li><a href="#">时尚女鞋</a></li><li><a href="#">短裤</a></li><li><a href="#">半身裙</a></li>
+                <li><a href="#">男士外套</a></li><li><a href="#">墙纸</a></li><li><a href="#">行车记录议</a></li>
+                <li><a href="#">新款男鞋</a></li><li><a href="#">短裤</a></li><li><a href="#">耳机</a></li>
+                <a href="#"><span style="color: black">更多<img src="img/gengduo.jpg" width="10px" height="10px"></span></a>
+            </div>
+        </div>
+        <div id="tb_weima">
+            <img  class="weima" src="img/weima.jpg" width="100px" height="100px " >
+        </div>
+    </div>
+    <div id="tb_center">
+        <div id="tb_center_top">
+                <ul>
+                    <li> <a href="#">天猫</a></li>
+                    <li> <a href="#">聚划算</a></li>
+                    <li> <a href="#">天猫超市</a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#" >淘抢购</a></li>
+                    <li> <a href="#">电器城</a></li>
+                    <li> <a href="#">司法拍卖</a></li>
+                    <li> <a href="#">中国质造</a></li>
+                    <li> <a href="#">兴农扶贫</a></li>
+                </ul>
+                <ul >
+                    <li> <a href="#" >飞猪旅行</a></li>
+                    <li> <a href="#">智能生活</a></li>
+                    <li> <a href="#">苏宁易购</a></li>
+                </ul>
+        </div>
+        <div id="tb_center_left">
+            <div id="biaoti" style="position: relative;z-index: 10">
+                <span>主题市场</span>
+            </div>
+            <div id="tb_center_biaoti">
+                <ul class="tb_center_biaoti">
+                    <li><a href="#">女装</a>/</li><li><a href="#">男装</a>/</li><li><a href="#">内衣</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 7px; left: 37px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">鞋靴</a>/</li><li><a href="#">箱包</a>/</li><li><a href="#">配件</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 7px; left: 37px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">童装玩具</a>/</li><li><a href="#">孕产</a>/</li><li><a href="#">用品</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 5px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">加点</a>/</li><li><a href="#">数码</a>/</li><li><a href="#">手机</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 36px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">美妆</a>/</li><li><a href="#">洗护</a>/</li><li><a href="#">保健品</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 20px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">珠宝</a>/</li><li><a href="#">眼镜</a>/</li><li><a href="#">手表</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 5px; left: 35px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">运动</a>/</li><li><a href="#">户外</a>/</li><li><a href="#">乐器</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 37px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">游戏</a>/</li><li><a href="#">动漫</a>/</li><li><a href="#">影视</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 37px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">美食</a>/</li><li><a href="#">生鲜</a>/</li><li><a href="#">零食</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 37px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">鲜花</a>/</li><li><a href="#">宠物</a>/</li><li><a href="#">农资</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 37px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">房产</a>/</li><li><a href="#">装修</a>/</li><li><a href="#">建材</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 37px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">汽车</a>/</li><li><a href="#">二手车</a>/</li><li><a href="#">用品</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 21px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">办公</a>/</li><li><a href="#">DIY</a>/</li><li><a href="#">五金电子</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top:6px; left: 11px;"/>
+                </ul>
+                <ul>
+                    <li><a href="#">百货</a>/</li><li><a href="#">餐厨</a>/</li><li><a href="#">家庭保健</a></li>
+                    <img src="img/gengduo1.jpg"  width="6px"  height="10px" style="position: relative;top: 6px; left: 4px;"/>
+                </ul>
+            </div>
+            <div id="tb_left_left_js">
+                <div class="js1"><span>女装</span><span>男装</span><span>内衣</span></div>
+                <div class="js2"><span>鞋靴</span><span>箱包</span><span>配件</span></div>
+                <div class="js3"><span>童装玩具</span><span>孕产</span><span>用品</span></div>
+                <div class="js4"><span>数码</span><span>加点</span><span>手机</span></div>
+                <div class="js5"><span>美妆</span><span>洗护</span><span>保健品</span></div>
+                <div class="js6"><span>珠宝</span><span>眼镜</span><span>手表</span></div>
+                <div class="js7"><span>运动</span><span>户外</span><span>乐器</span></div>
+                <div class="js8"><span>游戏</span><span>动漫</span><span>影视</span></div>
+                <div class="js9"><span>美食</span><span>生鲜</span><span>零食</span></div>
+                <div class="js10"><span>鲜花</span><span>宠物</span><span>农资</span></div>
+                <div class="js11"><span>房产</span><span>装修</span><span>建材</span></div>
+                <div class="js12"><span>汽车</span><span>二手车</span><span>用品</span></div>
+                <div class="js13"><span>办公</span><span>DIY</span><span>五金电子</span></div>
+                <div class="js14"><span>百货</span><span>餐厨</span><span>家庭保健</span></div>
+            </div>
+        </div>
+        <div id="tb_center_center_tupian">
+            <div id="tb_lb">
+                <img id="d1"   src="img/a1.jpg" width="500px"  height="250px"
+                     onmouseover="tingtu()" onmouseout="starttu()"/>
+                <span><img src="img/tu1.jpg" width="180px" height="250px"></span>
+            </div>
+            <div id="tb_lb_jz">
+                <ul class="tb_lb_jz">
+                    <li id="li1"><a href="#" onmouseover="stoptu(1,this)" onmouseout="dongtu()">1</a></li>
+                    <li id="li2"><a href="#" onmouseover="stoptu(2,this)" onmouseout="dongtu()">2</a></li>
+                    <li id="li3"><a href="#" onmouseover="stoptu(3,this)" onmouseout="dongtu()">3</a></li>
+                    <li id="li4"><a href="#" onmouseover="stoptu(4,this)" onmouseout="dongtu()">4</a></li>
+                    <li id="li5"><a href="#" onmouseover="stoptu(5,this)" onmouseout="dongtu()">5</a></li>
+                    <li id="li6"><a href="#" onmouseover="stoptu(6,this)" onmouseout="dongtu()">6</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="tb_center_right">
+            <div id="tianmao_gg">
+                <span></span>
+                <em style="color: grey">理想生活上天猫</em>
+                <strong>
+                    <i id="i">1</i>/6
+                </strong>
+            </div>
+            <div id="tianmao_xm">
+                <ul id="bianse">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="tmall_lb">
+                <img   src="img/b1.jpg" width="500px" height="222px">
+                <img   src="img/b2.jpg" width="500px" height="222px">
+                <img   src="img/b3.jpg" width="500px" height="222px">
+                <img   src="img/b4.jpg" width="500px" height="222px">
+                <img   src="img/b5.jpg" width="500px" height="222px">
+                <img   src="img/b6.jpg" width="500px" height="222px">
+            </div>
+                <span class="tu2"><i class="tu2_z">今日热卖</i><img src="img/tu2.jpg" width="180px"  height="230px"></span>
+            <script src="jquery-1.11.3.min.js"></script>
+            <script>
+                //天猫轮播图
+                var index=0;
+                var mg=$("#tmall_lb img");
+                var len=mg.length;
+                var setiao=$("#bianse li");
+                var tmdsq=setInterval("qbdsq()",3000);
+                var tbttdsq=setInterval("yd()",5000);
+                function play(n) {
+                    mg.eq(n).fadeIn(1000).siblings("img").fadeOut(1000);
+                }
+
+                function sz(){
+                    index++;
+                    $("#i").html(index);
+                }
+
+                function bianse(i){
+                    setiao.eq(i).css("background-color","black").siblings("li").css("background-color","indianred")
+                }
+
+                $(function () {
+                   $("#tmall_lb img").mouseenter(function () {
+                            clearInterval(tmdsq)
+                   })
+                    $("#tmall_lb img").mouseleave(function () {
+                        tmdsq=setInterval("qbdsq()",3000);
+                    });
+                });
+
+                function qbdsq(){
+                    play(index);
+                    bianse(index);
+                    sz(index);
+                    if (index==len){
+                        index=0;
+                    }
+                }
+
+                function yd() {
+                    var Y=$("#donghua").position().top;
+                    var Y1=Y-144;
+                    if(Y1<-248){
+                        Y1=0;
+                    }
+                    $("#donghua").animate({top:Y1});
+                }
+                $(function () {
+                    $("#donghua").mouseenter(function () {
+                        clearInterval(tbttdsq);
+                    });
+                    $("#donghua").mouseleave(function () {
+                        tbttdsq=setInterval("yd()",5000);
+                    });
+                });
+            </script>
+            <div id="tb_r_qb">
+                <div id="tb_zhdl" >
+                    <a href="#"><img src="img/touxiang_t.jpg" width="100px" height="100px" style="z-index: -1"></a>
+                    <span>Hi! 你好</span>
+                </div>
+                <div id="tb_zzk">
+                    <ul>
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li><a href="#">开店</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tb_right">
+        <div id="tb_right_xx">
+            <div class="box_xx">
+            <ul id="fb" >
+                <li class="fb box_xx_xz">公告</li>
+                <li class="fb ">规则</li>
+                <li class="fb">论坛</li>
+                <li class="fb">安全</li>
+                <li class="fb">公益</li>
+            </ul>
+            </div>
+            <div class="products">
+                <div class="main selected"><p>这是公告页面</p><p>这是公告页面</p></div>
+                <div class="main" ><p>这是规则页面</p><p>这是规则页面</p></div>
+                <div class="main" ><p>这是论坛页面</p><p>这是论坛页面</p></div>
+                <div class="main" ><p>这是安全页面</p><p>这是安全页面</p></div>
+                <div class="main" ><p>这是公益页面</p><p>这是公益页面</p></div>
+            </div>
+            <div id="tb_right_bm">
+                <ul>
+                    <li class="jieshao">
+                        <a href="#">
+                            <span class="chf yy"></span>
+                            <p>充话费</p>
+                        </a>
+                    </li>
+                    <li class="jieshao">
+                        <a href="#">
+                            <span class="lx yy"></span>
+                            <p>旅行</p>
+                        </a>
+                    </li>
+                    <li class="chexian_box jieshao">
+                        <a href="#">
+                            <span class="cx yy"></span>
+                            <p>车险</p>
+                        </a>
+                    </li>
+                    <li class="youxi_box">
+                        <a href="#">
+                            <span class="yx yy"></span>
+                            <p>游戏</p>
+                        </a>
+                    </li>
+                    <li class="caipiao_box">
+                        <a href="#">
+                            <span class="cp yy"></span>
+                            <p>彩票</p>
+                        </a>
+                    </li>
+                    <li class="dianying_box">
+                        <a href="#">
+                            <span class="dy yy"></span>
+                            <p>电影</p>
+                        </a>
+                    </li>
+                    <li class="jiudian_box">
+                        <a href="#">
+                            <span class="jd yy"></span>
+                            <p>酒店</p>
+                        </a>
+                    </li>
+                    <li class="licai_box">
+                        <a href="#">
+                            <span class="lc yy"></span>
+                            <p>理财</p>
+                        </a>
+                    </li>
+                    <li class="zhaofuwu_box">
+                        <a href="#">
+                            <span class="zfw yy"></span>
+                            <p>找服务</p>
+                        </a>
+                    </li>
+                    <li class="yanchu_box">
+                        <a href="#">
+                            <span class="yc yy"></span>
+                            <p>演出</p>
+                        </a>
+                    </li>
+                    <li class="shuidianmei_box">
+                        <a href="#">
+                            <span class="sdm yy"></span>
+                            <p>水电煤</p>
+                        </a>
+                    </li>
+                    <li class="huochepiao_box">
+                        <a href="#">
+                            <span class="hcp yy"></span>
+                            <p>火车票</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="tb_right_bm_xx">
+                <div class="chf_xx">
+                    <span>话费充值页</span>
+                </div>
+                <div class="lx_xx">
+                    <span>旅行攻略详细页面</span>
+                </div>
+                <div class="cx_xx">
+                    <span>车险险种详解页面</span>
+                </div>
+            </div>
+            <script src="jquery-1.11.3.min.js"></script>
+            <script>
+                $(function(){
+
+                    $(".jieshao").mouseenter(function(){
+                        var jsidx=$(this).index();
+                        $("#tb_right_bm_xx>div").eq(jsidx).show().siblings("div").hide();
+                    });
+                    $(".jieshao").mouseleave(function(){
+                       $ ("#tb_right_bm_xx>div").hide();
+                    });
+
+                });
+            </script>
+        </div>
+    </div>
+    <div id="tb_bottom">
+        <div id="botoom_img" ><img class="tb_tt" src="img/tb_tt.png" width="129px" height="26px" style="display: inline"></div>
+            <div id="tt_xx">
+                <div id="donghua">
+                <div class="xx1"><a href="#"><img  src="img/xx_11.jpg"  width="120px" height="68px"/><h4>两兄妹PS假报纸，敲诈商家300多万</h4>
+                    <p>天不怕，地不怕，就怕流氓有文化！近日，阿里巴巴打假特战队协助揭阳警方抓获一对“文化流氓”，兄妹两人靠印刷假报纸，敲诈淘宝商家300多万元。到底什么情况？一起来看这组图片。王氏兄妹看到淘宝上一些窗帘卖家推出爆款，便动歪脑筋，把窗帘上的图案抄录下来，PS到报纸上，伪造公开发表声明。图</p></a>
+                </div>
+                <div class="xx2"><a href="#"><img  src="img/xx_22.jpg" /><h4>阿里CEO用酒窝杀拿下无人超市最高折扣</h4>
+                    <p>这几天，乌镇成了热点。除了互联网大佬们的饭局，天猫无人超市也靠“微笑打折”萌翻了朋友圈。会微笑的人不会吃亏，这是绝对未来的真理。阿里CEO张勇也在现场体验了一把，为了拿到更多的折扣，不仅把眼镜摘了，还祭出最萌微笑“酒窝杀”，赢得全场最高折扣！逍遥子通过结算门，买走一只天猫公仔。作</p></a>
+                </div>
+                <div class="xx3"><a href="#"><img  src="img/xx_33.jpg" /><h4>乐高建筑天际线系列：上海套装全球首发</h4>
+                    <p>乐高建筑天际线系列：上海在中国全球首发，提前与中国乐高粉丝见面2017年12月2日，乐高?建筑天际线系列：上海套装全球首发，这是乐高集团第一次推出以中国地标建筑为主题的城市天际线产品。八座沪上标志性建筑以乐高颗粒的形式勾勒出独特的城市魅力，成为具有城市情怀的魔都人和乐高玩家们争相</p></a>
+                </div>
+            </div>
+            </div>
+        <div id="app">
+                <div id="app_box">
+                    <h3>阿里APP</h3>
+                    <ul>
+                        <li><a href="#"><img src="img/tb.png" width="30px" height="30px"/></a></li>
+                        <div><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫淘宝</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/tmall.png" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 41px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫天猫</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/ju.png" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 87px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫聚宝</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/zfb.png" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 126px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫支付</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/ww.png" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 167px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫旺旺</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/tpp.png" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 0;top: 7px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫淘票</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/td.png" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 41px;top: 7px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫土豆</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/fz.png" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 85px;top: 7px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫飞猪</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/ff.png" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 125px;top: 7px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫翅膀</p></div>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="img/xianyu.jpg" width="30px" height="30px"/></a></li>
+                        <div style="position: absolute;left: 166px;top: 7px"><img src="img/tb_ewm.jpg" width="50px" height="50px"/><p>扫一扫咸鱼</p></div>
+                    </ul>
+
+                </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
